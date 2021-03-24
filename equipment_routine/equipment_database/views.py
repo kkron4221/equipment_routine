@@ -1,4 +1,9 @@
 from django.shortcuts import HttpResponse
+from django.views import generic
 
-def index(request):
-    return HttpResponse("First Test with making apps")
+from .models import Equipment
+
+class DatabaseView(generic.DateDetailView):
+    def get_queryset(self):
+        return Equipment.objects.order_by('equipment_name')
+    template_name = '../equipment_database/' 
