@@ -1,0 +1,11 @@
+{% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+            <li>
+                {{ equipment.name }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Equipment, Please set equipment information.</p>
+{% endif %}
