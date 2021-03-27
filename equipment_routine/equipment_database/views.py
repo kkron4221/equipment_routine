@@ -1,8 +1,7 @@
 from django.shortcuts import HttpResponse
-from django.views import generic
 from django.template import loader
 
-from .models import Equipment
+
 
 def index(request):
     template = loader.get_template('equipment_database/index.html')

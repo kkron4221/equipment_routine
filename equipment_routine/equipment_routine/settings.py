@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'equipment_database',
+    'connect_settlement',
     'equipment_database.apps.EquipmentDatabaseConfig',
     'django.contrib.admin',
     'django.contrib.auth',
