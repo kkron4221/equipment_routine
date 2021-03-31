@@ -1,12 +1,18 @@
-{% if latest_question_list %}
-    <ul>
-        {% for question in latest_question_list %}
-            <li>
-                {{ equipment.name }}
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
+<table border="1">
+<tr>
+    <th>備品</th>
+    <th>量</th>
+</tr>
+    {% for equipment in equipment_list %}
+        <tr>
+            <td>{{ equipment.equipment_name }}</td>
+            <td>{{ equipment.equipment_amount}}</td>
+        </tr>
+    {% endfor %}
+</tr>
+</table>
+
+
+<!-- 
     <p>No Equipment, Please set equipment information.</p>
-    <a href="{% url 'connect_settlement:display' %}">hogehog</a>
-{% endif %}
+    <a href="{% url 'connect_settlement:display' %}">hogehog</a> -->
